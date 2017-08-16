@@ -1,0 +1,30 @@
+
+
+#login_form {
+	float:right;
+    margin-top: 60px;
+}
+#login_form input {
+    border: 0;
+    BACKGROUND-COLOR: transparent;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    BORDER-LEFT: #ffffff 1px solid;
+    COLOR: #ffffff;
+    HEIGHT: 18px;
+    font-size: 12pt
+}
+#login_form .loginbtn {
+    BORDER-RIGHT: #ffffff 1px solid;
+    BORDER-TOP: #ffffff 1px solid;
+    height: 20px;
+}
+#login_form .qrcode {
+    BORDER-RIGHT: #ffffff 1px solid;
+    BORDER-TOP: #ffffff 1px solid;
+    height: 20px;
+}
+
+#buttom_id {
+    color: wheat; height:50px; position:absolute; bottom:0; width:100%;
+    font-size: 8pt
+}

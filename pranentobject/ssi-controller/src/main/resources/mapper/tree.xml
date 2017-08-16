@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"   
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<!-- sqlMap：映射标签
+	namespace：命名空间
+ -->
+<sqlMap namespace="tree">
+
+	<!-- 为数据类型起别名 -->
+	<typeAlias alias="tree" type="com.jk.pojo.tree.Tree"/>
+	
+	<select id="loadTree" resultClass="tree">
+		select treeID as "id",
+			treeName as "name",
+			parentID as "pid",
+			url as "url"
+		from t_tree
+	</select>
+	
+	<select id="findTree" resultClass="tree">
+		select treeID as "id",
+			treeName as "text",
+			parentID as "pid",
+			url as "url"
+		from t_tree
+		where parentID = #parentID#
+	</select>
+	
+	<select id="querySonCount" resultClass="tree">
+		select count(1)
+		from t_tree
+		where parentID = #treeID#
+	</select>
+</sqlMap>
